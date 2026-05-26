@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DATIA | Inteligencia Artificial y Automatización Empresarial</title>
+
+  <title>DATIA | Sales Intelligence & IA Empresarial</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,19 +19,20 @@
     }
 
     body{
-      font-family:'Poppins', sans-serif;
-      background:#050816;
+      font-family:'Poppins',sans-serif;
+      background:#020617;
       color:white;
       overflow-x:hidden;
     }
 
     :root{
-      --primary:#00A3FF;
-      --secondary:#0E1629;
-      --card:#111B31;
-      --text:#DDE7F5;
-      --white:#FFFFFF;
-      --gradient:linear-gradient(135deg,#00A3FF,#0066FF);
+      --primary:#5B5CFF;
+      --secondary:#00B7FF;
+      --dark:#071024;
+      --card:#0B1730;
+      --text:#C8D3F5;
+      --border:rgba(255,255,255,0.08);
+      --gradient:linear-gradient(135deg,#00B7FF,#6C3CFF);
     }
 
     a{
@@ -39,25 +41,24 @@
     }
 
     section{
-      padding:90px 8%;
+      padding:100px 8%;
     }
 
     .container{
-      max-width:1400px;
+      max-width:1450px;
       margin:auto;
     }
 
     /* NAVBAR */
 
     nav{
-      width:100%;
       position:fixed;
       top:0;
-      left:0;
+      width:100%;
       z-index:1000;
-      background:rgba(5,8,22,0.9);
+      background:rgba(2,6,23,0.85);
       backdrop-filter:blur(12px);
-      border-bottom:1px solid rgba(255,255,255,0.08);
+      border-bottom:1px solid rgba(255,255,255,0.05);
     }
 
     .nav-container{
@@ -70,11 +71,13 @@
     .logo{
       font-size:42px;
       font-weight:800;
-      letter-spacing:3px;
+      letter-spacing:2px;
     }
 
     .logo span{
-      color:var(--primary);
+      background:var(--gradient);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
     }
 
     .menu{
@@ -89,21 +92,28 @@
     }
 
     .menu a:hover{
-      color:var(--primary);
+      color:#7F8CFF;
     }
 
     .btn{
       background:var(--gradient);
-      padding:14px 24px;
-      border-radius:12px;
       color:white;
+      padding:14px 24px;
+      border-radius:14px;
       font-weight:600;
       transition:0.3s;
       display:inline-block;
+      box-shadow:0 0 20px rgba(91,92,255,0.3);
     }
 
     .btn:hover{
-      transform:translateY(-2px);
+      transform:translateY(-3px);
+    }
+
+    .btn-outline{
+      border:1px solid rgba(255,255,255,0.15);
+      padding:14px 24px;
+      border-radius:14px;
     }
 
     /* HERO */
@@ -113,34 +123,37 @@
       display:flex;
       align-items:center;
       background:
-      radial-gradient(circle at top right, rgba(0,163,255,0.25), transparent 35%),
-      radial-gradient(circle at bottom left, rgba(0,102,255,0.2), transparent 35%),
-      #050816;
+      radial-gradient(circle at top left, rgba(0,183,255,0.15), transparent 30%),
+      radial-gradient(circle at bottom right, rgba(108,60,255,0.2), transparent 35%),
+      #020617;
     }
 
-    .hero-content{
+    .hero-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:60px;
+      gap:70px;
       align-items:center;
     }
 
     .hero-text h1{
       font-size:72px;
-      line-height:1.1;
+      line-height:1.05;
       margin-bottom:25px;
       font-weight:800;
     }
 
     .hero-text h1 span{
-      color:var(--primary);
+      background:var(--gradient);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
     }
 
     .hero-text p{
       color:var(--text);
-      line-height:1.8;
       font-size:18px;
+      line-height:1.9;
       margin-bottom:35px;
+      max-width:700px;
     }
 
     .hero-buttons{
@@ -149,169 +162,168 @@
       flex-wrap:wrap;
     }
 
-    .btn-secondary{
-      border:1px solid rgba(255,255,255,0.2);
-      padding:14px 24px;
-      border-radius:12px;
-      color:white;
+    .hero-image{
+      position:relative;
     }
 
-    .hero-card{
-      background:rgba(17,27,49,0.8);
+    .hero-image img{
+      width:100%;
+      border-radius:28px;
+      box-shadow:0 0 60px rgba(91,92,255,0.3);
       border:1px solid rgba(255,255,255,0.08);
-      border-radius:30px;
-      padding:40px;
-      backdrop-filter:blur(12px);
-      box-shadow:0 0 40px rgba(0,163,255,0.15);
     }
 
-    .hero-card h3{
-      margin-bottom:25px;
-      font-size:28px;
-    }
-
-    .hero-card ul{
-      list-style:none;
-    }
-
-    .hero-card li{
-      margin-bottom:18px;
-      color:var(--text);
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
-
-    .hero-card li::before{
-      content:"✓";
-      color:var(--primary);
-      font-weight:bold;
-    }
-
-    /* SECTION TITLES */
+    /* SECTION TITLE */
 
     .section-title{
       text-align:center;
-      margin-bottom:60px;
+      margin-bottom:70px;
     }
 
     .section-title h2{
-      font-size:48px;
-      margin-bottom:15px;
+      font-size:50px;
+      margin-bottom:20px;
     }
 
     .section-title p{
       color:var(--text);
-      max-width:800px;
+      max-width:900px;
       margin:auto;
-      line-height:1.7;
+      line-height:1.8;
     }
 
     /* ABOUT */
 
     .about-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
       gap:30px;
     }
 
-    .card{
-      background:var(--card);
-      padding:35px;
+    .about-card{
+      background:linear-gradient(180deg,#0B1730,#081122);
+      border:1px solid var(--border);
       border-radius:24px;
-      border:1px solid rgba(255,255,255,0.06);
+      padding:40px;
       transition:0.3s;
     }
 
-    .card:hover{
+    .about-card:hover{
       transform:translateY(-5px);
-      border-color:rgba(0,163,255,0.5);
+      border-color:rgba(91,92,255,0.5);
     }
 
-    .card h3{
+    .about-card h3{
       margin-bottom:20px;
-      font-size:24px;
+      font-size:28px;
     }
 
-    .card p{
+    .about-card p{
+      color:var(--text);
+      line-height:1.9;
+    }
+
+    /* PRODUCTS */
+
+    .products-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:30px;
+    }
+
+    .product-card{
+      background:#081122;
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      transition:0.3s;
+    }
+
+    .product-card:hover{
+      transform:translateY(-5px);
+      border-color:rgba(91,92,255,0.5);
+    }
+
+    .product-card img{
+      width:100%;
+      height:260px;
+      object-fit:cover;
+    }
+
+    .product-content{
+      padding:30px;
+    }
+
+    .product-content h3{
+      margin-bottom:18px;
+      font-size:28px;
+    }
+
+    .product-content p{
       color:var(--text);
       line-height:1.8;
+      margin-bottom:20px;
     }
 
-    /* SERVICES */
+    .product-content ul{
+      color:var(--text);
+      padding-left:18px;
+      line-height:2;
+    }
 
-    .services-grid{
+    /* FEATURES */
+
+    .features{
+      background:linear-gradient(180deg,#050C1A,#081122);
+    }
+
+    .features-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
       gap:30px;
     }
 
-    .service-card{
-      background:linear-gradient(180deg,#111B31,#0A1222);
-      border-radius:24px;
+    .feature-card{
+      background:#0B1730;
       padding:35px;
-      border:1px solid rgba(255,255,255,0.08);
+      border-radius:22px;
+      border:1px solid var(--border);
     }
 
-    .service-card h3{
-      color:var(--primary);
+    .feature-card h3{
       margin-bottom:20px;
+      color:#8AA1FF;
     }
 
-    .service-card ul{
-      padding-left:18px;
+    .feature-card p{
       color:var(--text);
-      line-height:2;
+      line-height:1.8;
     }
 
-    /* PRODUCT */
+    /* INDUSTRIES */
 
-    .product{
-      background:linear-gradient(135deg,#08101F,#0F1D38);
-    }
-
-    .product-grid{
+    .industries-grid{
       display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:60px;
-      align-items:center;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
     }
 
-    .product-info h2{
-      font-size:48px;
-      margin-bottom:25px;
+    .industry{
+      background:#0B1730;
+      border-radius:22px;
+      padding:35px;
+      border:1px solid var(--border);
+      text-align:center;
     }
 
-    .product-info p{
+    .industry h3{
+      margin-bottom:15px;
+      font-size:24px;
+    }
+
+    .industry p{
       color:var(--text);
-      line-height:1.9;
-      margin-bottom:25px;
-    }
-
-    .product-features{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:20px;
-      margin-top:30px;
-    }
-
-    .feature{
-      background:rgba(255,255,255,0.04);
-      padding:20px;
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,0.05);
-    }
-
-    .feature h4{
-      margin-bottom:10px;
-      color:var(--primary);
-    }
-
-    .phone{
-      width:100%;
-      border-radius:40px;
-      border:8px solid #111;
-      box-shadow:0 0 60px rgba(0,163,255,0.25);
+      line-height:1.8;
     }
 
     /* CTA */
@@ -319,20 +331,20 @@
     .cta{
       text-align:center;
       background:
-      radial-gradient(circle at center, rgba(0,163,255,0.2), transparent 40%),
-      #050816;
+      radial-gradient(circle at center, rgba(108,60,255,0.18), transparent 30%),
+      #020617;
     }
 
     .cta h2{
-      font-size:54px;
-      margin-bottom:20px;
+      font-size:58px;
+      margin-bottom:25px;
     }
 
     .cta p{
-      max-width:800px;
+      max-width:850px;
       margin:auto;
       color:var(--text);
-      line-height:1.8;
+      line-height:1.9;
       margin-bottom:40px;
     }
 
@@ -346,40 +358,32 @@
     /* FOOTER */
 
     footer{
-      background:#03050F;
-      padding:50px 8%;
-      border-top:1px solid rgba(255,255,255,0.08);
+      background:#01040F;
+      padding:60px 8%;
+      border-top:1px solid rgba(255,255,255,0.05);
     }
 
     .footer-grid{
       display:grid;
       grid-template-columns:2fr 1fr 1fr;
-      gap:40px;
+      gap:50px;
     }
 
-    .footer-grid p{
-      color:var(--text);
-      line-height:1.8;
-      margin-top:15px;
-    }
-
-    .footer-grid h4{
+    footer h4{
       margin-bottom:20px;
     }
 
-    .footer-grid ul{
+    footer p,
+    footer li{
+      color:var(--text);
+      line-height:1.9;
       list-style:none;
     }
 
-    .footer-grid li{
-      margin-bottom:12px;
-      color:var(--text);
-    }
-
     .copy{
+      margin-top:50px;
       text-align:center;
-      margin-top:40px;
-      color:#7E8BA3;
+      color:#7A86A8;
       font-size:14px;
     }
 
@@ -387,8 +391,7 @@
 
     @media(max-width:1000px){
 
-      .hero-content,
-      .product-grid{
+      .hero-grid{
         grid-template-columns:1fr;
       }
 
@@ -396,10 +399,9 @@
         font-size:52px;
       }
 
-      .product-info h2,
       .section-title h2,
       .cta h2{
-        font-size:38px;
+        font-size:40px;
       }
 
       .footer-grid{
@@ -409,6 +411,7 @@
       .menu{
         display:none;
       }
+
     }
 
     @media(max-width:600px){
@@ -418,11 +421,7 @@
       }
 
       .logo{
-        font-size:30px;
-      }
-
-      .product-features{
-        grid-template-columns:1fr;
+        font-size:32px;
       }
 
       .hero-buttons{
@@ -430,7 +429,7 @@
       }
 
       .btn,
-      .btn-secondary{
+      .btn-outline{
         width:100%;
         text-align:center;
       }
@@ -442,79 +441,73 @@
 
 <body>
 
-  <!-- NAVBAR -->
+  <!-- NAV -->
 
   <nav>
+
     <div class="nav-container">
 
       <div class="logo">
-        D<span>A</span>TIA
+        D<span>ATIA</span>
       </div>
 
       <div class="menu">
-        <a href="#about">Nosotros</a>
-        <a href="#services">Servicios</a>
-        <a href="#product">Producto</a>
-        <a href="#contact">Contacto</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#productos">Productos</a>
+        <a href="#soluciones">Soluciones</a>
+        <a href="#industrias">Industrias</a>
+        <a href="#contacto">Contacto</a>
       </div>
 
-      <!-- CAMBIAR LINK DE WHATSAPP -->
-      <a href="https://wa.me/51943808548" class="btn" target="_blank">
+      <!-- CAMBIAR WHATSAPP -->
+      <a href="https://wa.me/51999999999" target="_blank" class="btn">
         WhatsApp
       </a>
 
     </div>
+
   </nav>
 
   <!-- HERO -->
 
   <section class="hero">
 
-    <div class="container hero-content">
+    <div class="container hero-grid">
 
       <div class="hero-text">
 
         <h1>
-          Transformamos datos en
-          <span>inteligencia automatizada</span>
+          Inteligencia para
+          <span>vender más y mejor</span>
         </h1>
 
         <p>
-          DATIA es una empresa especializada en Machine Learning,
-          Ciencia de Datos y Automatización con Inteligencia Artificial.
-          Desarrollamos soluciones empresariales enfocadas en eficiencia,
-          productividad y transformación digital real.
+          DATIA es una plataforma de Sales Intelligence y Automatización Empresarial
+          impulsada por Data, Inteligencia Artificial y Automatización.
+          Ayudamos a empresas a encontrar oportunidades comerciales,
+          enriquecer información, automatizar procesos y generar decisiones
+          basadas en datos reales.
         </p>
 
         <div class="hero-buttons">
 
-          <!-- CAMBIAR LINK GOOGLE FORM -->
-          <a href="https://forms.gle/T1fVmD6Qf4sJgdMu6" target="_blank" class="btn">
-            Solicitar Información
+          <!-- CAMBIAR LINK FORM -->
+          <a href="https://forms.gle/TUFORMULARIO" target="_blank" class="btn">
+            Solicitar Demo
           </a>
 
-          <a href="#services" class="btn-secondary">
-            Ver Servicios
+          <a href="#productos" class="btn-outline">
+            Ver Plataforma
           </a>
 
         </div>
 
       </div>
 
-      <div class="hero-card">
+      <div class="hero-image">
 
-        <h3>¿Qué hacemos?</h3>
-
-        <ul>
-          <li>Automatización con IA</li>
-          <li>Speech Analytics</li>
-          <li>OCR Inteligente</li>
-          <li>Machine Learning</li>
-          <li>Sales Intelligence</li>
-          <li>Procesamiento documental</li>
-          <li>Scraping y enriquecimiento</li>
-          <li>Dashboards y sistemas web</li>
-        </ul>
+        <!-- REEMPLAZAR -->
+        <img src="assets/Datia_Oficial.png" alt="DATIA Dashboard">
 
       </div>
 
@@ -524,48 +517,57 @@
 
   <!-- ABOUT -->
 
-  <section id="about">
+  <section id="nosotros">
 
     <div class="container">
 
       <div class="section-title">
 
-        <h2>Sobre DATIA</h2>
+        <h2>¿Qué es DATIA?</h2>
 
         <p>
-          DATIA nace con el objetivo de ayudar a empresas a automatizar
-          procesos críticos utilizando inteligencia artificial,
-          ciencia de datos y automatización avanzada.
+          DATIA es una empresa tecnológica especializada en Inteligencia Comercial,
+          enriquecimiento de datos empresariales, automatización e inteligencia artificial aplicada a ventas y operaciones.
         </p>
 
       </div>
 
       <div class="about-grid">
 
-        <div class="card">
+        <div class="about-card">
+
           <h3>Misión</h3>
+
           <p>
-            Ayudar a empresas a acelerar su transformación digital
-            mediante soluciones de IA y automatización que generen
-            impacto operativo y comercial tangible.
+            Ayudar a empresas a vender mejor mediante inteligencia comercial,
+            automatización y análisis inteligente de datos que permitan tomar decisiones
+            rápidas, precisas y escalables.
           </p>
+
         </div>
 
-        <div class="card">
+        <div class="about-card">
+
           <h3>Visión</h3>
+
           <p>
-            Convertirnos en una empresa referente en Latinoamérica
-            en automatización empresarial con inteligencia artificial.
+            Convertirnos en la plataforma líder de Sales Intelligence e IA empresarial
+            en Latinoamérica, conectando datos, automatización y analítica avanzada
+            para transformar la productividad comercial.
           </p>
+
         </div>
 
-        <div class="card">
-          <h3>Enfoque</h3>
+        <div class="about-card">
+
+          <h3>Nuestro Enfoque</h3>
+
           <p>
-            Construimos soluciones reales orientadas a productividad,
-            eficiencia, reducción de tiempos operativos y generación
-            de valor mediante datos.
+            Creamos tecnología enfocada en resultados reales:
+            prospección inteligente, enriquecimiento empresarial,
+            automatización operativa y generación de insights accionables.
           </p>
+
         </div>
 
       </div>
@@ -574,78 +576,76 @@
 
   </section>
 
-  <!-- SERVICES -->
+  <!-- PRODUCTS -->
 
-  <section id="services">
+  <section id="productos">
 
     <div class="container">
 
       <div class="section-title">
 
-        <h2>Nuestros Servicios</h2>
+        <h2>Productos DATIA</h2>
 
         <p>
-          Soluciones empresariales diseñadas para automatizar,
-          analizar y potenciar operaciones con inteligencia artificial.
+          Un ecosistema completo de inteligencia comercial y automatización.
         </p>
 
       </div>
 
-      <div class="services-grid">
+      <div class="products-grid">
 
-        <div class="service-card">
+        <!-- PLATAFORMA -->
 
-          <h3>Inteligencia Comercial</h3>
+        <div class="product-card">
 
-          <ul>
-            <li>Scoring de clientes</li>
-            <li>Segmentación predictiva</li>
-            <li>Análisis de churn</li>
-            <li>Prospección B2B</li>
-            <li>Lead Enrichment</li>
-          </ul>
+          <img src="assets/laptop.png" alt="DATIA Platform">
 
-        </div>
+          <div class="product-content">
 
-        <div class="service-card">
+            <h3>DATIA Platform</h3>
 
-          <h3>Automatización con IA</h3>
+            <p>
+              Plataforma de Sales Intelligence diseñada para dealers,
+              equipos comerciales y empresas B2B.
+            </p>
 
-          <ul>
-            <li>OCR Inteligente</li>
-            <li>Procesamiento documental</li>
-            <li>Extracción desde PDFs</li>
-            <li>Validación automática</li>
-            <li>Flujos automatizados</li>
-          </ul>
+            <ul>
+              <li>Búsqueda empresarial por RUC</li>
+              <li>Contactos clave enriquecidos</li>
+              <li>Insights generados por IA</li>
+              <li>Scoring comercial automático</li>
+              <li>Análisis de potencial comercial</li>
+              <li>Automatización de prospección</li>
+            </ul>
 
-        </div>
-
-        <div class="service-card">
-
-          <h3>Speech Analytics</h3>
-
-          <ul>
-            <li>Transcripción de llamadas</li>
-            <li>Resúmenes automáticos</li>
-            <li>Análisis de sentimiento</li>
-            <li>Detección de palabras clave</li>
-            <li>Evaluación de protocolos</li>
-          </ul>
+          </div>
 
         </div>
 
-        <div class="service-card">
+        <!-- TELEGRAM -->
 
-          <h3>IA para Salud</h3>
+        <div class="product-card">
 
-          <ul>
-            <li>Automatización de FUAs</li>
-            <li>Procesamiento clínico</li>
-            <li>Digitalización médica</li>
-            <li>Extracción estructurada</li>
-            <li>Automatización de formatos</li>
-          </ul>
+          <img src="assets/celular.png" alt="DATIA Telegram Bot">
+
+          <div class="product-content">
+
+            <h3>DATIA Telegram Bot</h3>
+
+            <p>
+              Asistente inteligente empresarial conectado a la plataforma DATIA.
+            </p>
+
+            <ul>
+              <li>Consulta empresas por RUC</li>
+              <li>Perfil empresarial automático</li>
+              <li>Datos comerciales enriquecidos</li>
+              <li>Insights IA instantáneos</li>
+              <li>Consultas desde Telegram</li>
+              <li>Automatización conversacional</li>
+            </ul>
+
+          </div>
 
         </div>
 
@@ -655,65 +655,131 @@
 
   </section>
 
-  <!-- PRODUCT -->
+  <!-- FEATURES -->
 
-  <section class="product" id="product">
+  <section class="features" id="soluciones">
 
-    <div class="container product-grid">
+    <div class="container">
 
-      <div class="product-info">
+      <div class="section-title">
 
-        <h2>
-          Asistente Inteligente Empresarial vía Telegram
-        </h2>
+        <h2>Soluciones Inteligentes</h2>
 
         <p>
-          El primer producto de DATIA es un asistente conversacional
-          impulsado por inteligencia artificial, diseñado para automatizar
-          tareas empresariales, consultar información y generar insights
-          desde una conversación.
+          DATIA integra Data + IA + Automatización para potenciar ventas y operaciones.
         </p>
 
-        <p>
-          El usuario podrá consultar empresas por RUC,
-          generar reportes, resumir documentos,
-          transcribir llamadas y automatizar procesos
-          usando lenguaje natural.
-        </p>
+      </div>
 
-        <div class="product-features">
+      <div class="features-grid">
 
-          <div class="feature">
-            <h4>Sales Intelligence</h4>
-            <p>Consulta empresas y oportunidades comerciales.</p>
-          </div>
+        <div class="feature-card">
 
-          <div class="feature">
-            <h4>IA Conversacional</h4>
-            <p>Interactúa con lenguaje natural.</p>
-          </div>
+          <h3>Sales Intelligence</h3>
 
-          <div class="feature">
-            <h4>Speech Analytics</h4>
-            <p>Transcribe y analiza llamadas automáticamente.</p>
-          </div>
+          <p>
+            Identifica empresas con alto potencial comercial y prioriza oportunidades
+            usando scoring inteligente basado en IA.
+          </p>
 
-          <div class="feature">
-            <h4>Automatización</h4>
-            <p>Genera reportes y ejecuta flujos automáticos.</p>
-          </div>
+        </div>
+
+        <div class="feature-card">
+
+          <h3>Enriquecimiento Empresarial</h3>
+
+          <p>
+            Consolida información de empresas, contactos, teléfonos, LinkedIn,
+            correos y actividad comercial automáticamente.
+          </p>
+
+        </div>
+
+        <div class="feature-card">
+
+          <h3>Insights Inteligentes</h3>
+
+          <p>
+            Nuestra IA analiza empresas y genera recomendaciones,
+            riesgos, oportunidades y potencial de automatización.
+          </p>
+
+        </div>
+
+        <div class="feature-card">
+
+          <h3>Automatización Empresarial</h3>
+
+          <p>
+            Reduce tareas manuales y automatiza flujos operativos,
+            comerciales y analíticos mediante IA.
+          </p>
 
         </div>
 
       </div>
 
-      <div>
+    </div>
 
-        <img
-          class="phone"
-          src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop"
-          alt="DATIA BOT"
-        >
+  </section>
+
+  <!-- INDUSTRIES -->
+
+  <section id="industrias">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Industrias donde generamos impacto</h2>
+
+      </div>
+
+      <div class="industries-grid">
+
+        <div class="industry">
+
+          <h3>Telecomunicaciones</h3>
+
+          <p>
+            Inteligencia comercial, dealers, scoring empresarial
+            y automatización de ventas.
+          </p>
+
+        </div>
+
+        <div class="industry">
+
+          <h3>Call Centers</h3>
+
+          <p>
+            Speech Analytics, automatización operativa
+            y análisis de llamadas.
+          </p>
+
+        </div>
+
+        <div class="industry">
+
+          <h3>Salud</h3>
+
+          <p>
+            Automatización documental, procesamiento clínico
+            e IA aplicada a operaciones médicas.
+          </p>
+
+        </div>
+
+        <div class="industry">
+
+          <h3>Empresas B2B</h3>
+
+          <p>
+            Prospección inteligente, enriquecimiento comercial
+            y automatización de leads.
+          </p>
+
+        </div>
 
       </div>
 
@@ -723,30 +789,32 @@
 
   <!-- CTA -->
 
-  <section class="cta" id="contact">
+  <section class="cta" id="contacto">
 
     <div class="container">
 
       <h2>
-        Hablemos de tu próximo proyecto
+        Construyamos algo grande juntos
       </h2>
 
       <p>
-        En DATIA convertimos procesos manuales
-        en soluciones inteligentes capaces de generar
-        eficiencia operativa, automatización y crecimiento.
+        DATIA combina inteligencia comercial,
+        automatización y análisis avanzado
+        para ayudar a empresas a vender más,
+        automatizar mejor y tomar decisiones
+        basadas en datos reales.
       </p>
 
       <div class="cta-buttons">
 
-        <!-- CAMBIAR LINK FORM -->
-        <a href="https://forms.gle/T1fVmD6Qf4sJgdMu6" target="_blank" class="btn">
+        <!-- CAMBIAR FORM -->
+        <a href="https://forms.gle/TUFORMULARIO" target="_blank" class="btn">
           Solicitar Información
         </a>
 
         <!-- CAMBIAR WHATSAPP -->
-        <a href="https://wa.me/51943808548" target="_blank" class="btn-secondary">
-          Contactar por WhatsApp
+        <a href="https://wa.me/51999999999" target="_blank" class="btn-outline">
+          Hablar por WhatsApp
         </a>
 
       </div>
@@ -764,7 +832,7 @@
       <div>
 
         <div class="logo">
-          D<span>A</span>TIA
+          D<span>ATIA</span>
         </div>
 
         <p>
@@ -772,22 +840,21 @@
         </p>
 
         <p>
-          Nos especializamos en Machine Learning,
-          Ciencia de Datos y Automatización con Inteligencia Artificial.
+          Plataforma de Sales Intelligence e Inteligencia Artificial Empresarial.
         </p>
 
       </div>
 
       <div>
 
-        <h4>Servicios</h4>
+        <h4>Productos</h4>
 
         <ul>
-          <li>Inteligencia Comercial</li>
+          <li>DATIA Platform</li>
+          <li>Telegram Bot</li>
+          <li>Sales Intelligence</li>
           <li>Speech Analytics</li>
           <li>Automatización IA</li>
-          <li>OCR Inteligente</li>
-          <li>Machine Learning</li>
         </ul>
 
       </div>
@@ -797,8 +864,8 @@
         <h4>Contacto</h4>
 
         <ul>
-          <li>administracion@datia.pe</li>
-          <li>+51 943 808 548</li>
+          <li>ventas@datia.pe</li>
+          <li>+51 999 999 999</li>
           <li>Lima, Perú</li>
         </ul>
 
@@ -807,7 +874,7 @@
     </div>
 
     <div class="copy">
-      © 2026 DATIA — Todos los derechos reservados
+      © 2026 DATIA — Inteligencia que convierte. Tecnología que impulsa.
     </div>
 
   </footer>
