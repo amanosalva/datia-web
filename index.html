@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>DATIA | Sales Intelligence & IA Empresarial</title>
+  <meta name="description" content="DATIA: inteligencia comercial, analítica de datos y automatización con IA para vender más y operar mejor. Plataforma, Speech Analytics, Analytics y Automatización." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -49,6 +50,16 @@
       margin:auto;
     }
 
+    .eyebrow{
+      display:inline-block;
+      color:#8AA1FF;
+      font-weight:600;
+      font-size:13px;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+
     /* NAVBAR */
 
     nav{
@@ -66,12 +77,14 @@
       justify-content:space-between;
       align-items:center;
       padding:18px 8%;
+      gap:20px;
     }
 
     .logo{
       font-size:42px;
       font-weight:800;
       letter-spacing:2px;
+      white-space:nowrap;
     }
 
     .logo span{
@@ -83,16 +96,35 @@
     .menu{
       display:flex;
       gap:35px;
+      margin-left:auto;
     }
 
     .menu a{
       color:white;
       font-size:15px;
       transition:0.3s;
+      white-space:nowrap;
     }
 
     .menu a:hover{
       color:#7F8CFF;
+    }
+
+    .nav-actions{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .menu-toggle{
+      display:none;
+      background:none;
+      border:none;
+      color:white;
+      font-size:28px;
+      line-height:1;
+      cursor:pointer;
+      padding:4px 6px;
     }
 
     .btn{
@@ -104,6 +136,10 @@
       transition:0.3s;
       display:inline-block;
       box-shadow:0 0 20px rgba(91,92,255,0.3);
+      border:none;
+      cursor:pointer;
+      font-family:inherit;
+      font-size:15px;
     }
 
     .btn:hover{
@@ -114,6 +150,16 @@
       border:1px solid rgba(255,255,255,0.15);
       padding:14px 24px;
       border-radius:14px;
+      display:inline-block;
+    }
+
+    .btn-outline:hover{
+      border-color:rgba(255,255,255,0.4);
+    }
+
+    .nav-actions .btn{
+      padding:12px 20px;
+      font-size:14px;
     }
 
     /* HERO */
@@ -122,6 +168,7 @@
       min-height:100vh;
       display:flex;
       align-items:center;
+      padding-top:120px;
       background:
       radial-gradient(circle at top left, rgba(0,183,255,0.15), transparent 30%),
       radial-gradient(circle at bottom right, rgba(108,60,255,0.2), transparent 35%),
@@ -130,14 +177,14 @@
 
     .hero-grid{
       display:grid;
-      grid-template-columns:1fr 1fr;
+      grid-template-columns:1.1fr 1fr;
       gap:70px;
       align-items:center;
     }
 
     .hero-text h1{
-      font-size:35px;
-      line-height:1.05;
+      font-size:56px;
+      line-height:1.1;
       margin-bottom:25px;
       font-weight:800;
     }
@@ -150,10 +197,26 @@
 
     .hero-text p{
       color:var(--text);
-      font-size:14px;
+      font-size:17px;
       line-height:1.9;
       margin-bottom:35px;
-      max-width:700px;
+      max-width:620px;
+    }
+
+    .hero-badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-bottom:35px;
+    }
+
+    .hero-badge{
+      background:rgba(255,255,255,0.05);
+      border:1px solid var(--border);
+      color:var(--text);
+      font-size:13px;
+      padding:8px 16px;
+      border-radius:100px;
     }
 
     .hero-buttons{
@@ -181,7 +244,7 @@
     }
 
     .section-title h2{
-      font-size:50px;
+      font-size:44px;
       margin-bottom:20px;
     }
 
@@ -190,6 +253,7 @@
       max-width:900px;
       margin:auto;
       line-height:1.8;
+      font-size:16px;
     }
 
     /* ABOUT */
@@ -215,7 +279,7 @@
 
     .about-card h3{
       margin-bottom:20px;
-      font-size:28px;
+      font-size:26px;
     }
 
     .about-card p{
@@ -223,12 +287,61 @@
       line-height:1.9;
     }
 
+    /* ADVANTAGE */
+
+    .advantage{
+      background:linear-gradient(180deg,#050C1A,#081122);
+    }
+
+    .advantage-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:28px;
+    }
+
+    .advantage-card{
+      background:#0B1730;
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:34px;
+      transition:0.3s;
+    }
+
+    .advantage-card:hover{
+      transform:translateY(-5px);
+      border-color:rgba(0,183,255,0.5);
+    }
+
+    .advantage-icon{
+      width:52px;
+      height:52px;
+      border-radius:16px;
+      background:var(--gradient);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:24px;
+      margin-bottom:20px;
+    }
+
+    .advantage-card h3{
+      margin-bottom:14px;
+      font-size:21px;
+    }
+
+    .advantage-card p{
+      color:var(--text);
+      line-height:1.8;
+      font-size:15px;
+    }
+
     /* PRODUCTS */
 
     .products-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
       gap:30px;
+      margin-bottom:30px;
     }
 
     .product-card{
@@ -248,27 +361,133 @@
       width:100%;
       height:260px;
       object-fit:cover;
+      display:block;
     }
 
     .product-content{
       padding:30px;
     }
 
+    .product-tag{
+      display:inline-block;
+      background:rgba(0,183,255,0.12);
+      color:#5FD4FF;
+      font-size:12px;
+      font-weight:600;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      padding:6px 14px;
+      border-radius:100px;
+      margin-bottom:16px;
+    }
+
     .product-content h3{
       margin-bottom:18px;
-      font-size:28px;
+      font-size:26px;
     }
 
     .product-content p{
       color:var(--text);
       line-height:1.8;
       margin-bottom:20px;
+      font-size:15px;
     }
 
     .product-content ul{
       color:var(--text);
       padding-left:18px;
       line-height:2;
+      font-size:15px;
+    }
+
+    .products-grid-compact{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:24px;
+    }
+
+    .product-card-compact{
+      background:#081122;
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:32px;
+      transition:0.3s;
+    }
+
+    .product-card-compact:hover{
+      transform:translateY(-5px);
+      border-color:rgba(91,92,255,0.5);
+    }
+
+    .product-card-compact .advantage-icon{
+      width:46px;
+      height:46px;
+      font-size:20px;
+      border-radius:14px;
+    }
+
+    .product-card-compact h3{
+      font-size:21px;
+      margin-bottom:14px;
+    }
+
+    .product-card-compact p{
+      color:var(--text);
+      line-height:1.8;
+      font-size:14.5px;
+      margin-bottom:14px;
+    }
+
+    .case-box{
+      background:rgba(0,183,255,0.08);
+      border:1px solid rgba(0,183,255,0.25);
+      border-radius:14px;
+      padding:14px 16px;
+      font-size:13.5px;
+      color:#BFE7FF;
+      line-height:1.7;
+    }
+
+    .case-box b{
+      color:#7FD8FF;
+    }
+
+    /* PROCESS */
+
+    .process-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px;
+      counter-reset:step;
+    }
+
+    .process-card{
+      position:relative;
+      background:linear-gradient(180deg,#0B1730,#081122);
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:36px 30px;
+    }
+
+    .process-number{
+      font-size:42px;
+      font-weight:800;
+      background:var(--gradient);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      margin-bottom:14px;
+      display:block;
+    }
+
+    .process-card h3{
+      font-size:20px;
+      margin-bottom:12px;
+    }
+
+    .process-card p{
+      color:var(--text);
+      line-height:1.8;
+      font-size:14.5px;
     }
 
     /* FEATURES */
@@ -302,6 +521,63 @@
 
     /* INDUSTRIES */
 
+    .industries-priority{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:26px;
+      margin-bottom:30px;
+    }
+
+    .industry-priority{
+      background:linear-gradient(180deg,#0B1730,#081122);
+      border:1px solid rgba(91,92,255,0.35);
+      border-radius:22px;
+      padding:34px;
+    }
+
+    .industry-priority h3{
+      font-size:23px;
+      margin-bottom:18px;
+    }
+
+    .industry-priority .label{
+      display:block;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      margin-bottom:6px;
+    }
+
+    .industry-priority .label.problema{
+      color:#FF9C7F;
+    }
+
+    .industry-priority .label.solucion{
+      color:#7FE7B5;
+    }
+
+    .industry-priority p{
+      color:var(--text);
+      line-height:1.8;
+      font-size:14.5px;
+      margin-bottom:18px;
+    }
+
+    .industry-priority p:last-child{
+      margin-bottom:0;
+    }
+
+    .industries-secondary-title{
+      color:var(--text);
+      font-size:14px;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      margin-bottom:20px;
+      text-align:center;
+      opacity:0.7;
+    }
+
     .industries-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -318,12 +594,60 @@
 
     .industry h3{
       margin-bottom:15px;
-      font-size:24px;
+      font-size:22px;
     }
 
     .industry p{
       color:var(--text);
       line-height:1.8;
+      font-size:14.5px;
+    }
+
+    /* TEAM */
+
+    .team-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:28px;
+    }
+
+    .team-card{
+      background:#0B1730;
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:32px;
+      text-align:center;
+    }
+
+    .team-avatar{
+      width:64px;
+      height:64px;
+      border-radius:50%;
+      background:var(--gradient);
+      margin:0 auto 18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:22px;
+    }
+
+    .team-card h3{
+      font-size:18px;
+      margin-bottom:6px;
+    }
+
+    .team-card .role{
+      color:#8AA1FF;
+      font-size:13.5px;
+      font-weight:600;
+      margin-bottom:14px;
+    }
+
+    .team-card p{
+      color:var(--text);
+      font-size:14px;
+      line-height:1.7;
     }
 
     /* CTA */
@@ -336,7 +660,7 @@
     }
 
     .cta h2{
-      font-size:58px;
+      font-size:48px;
       margin-bottom:25px;
     }
 
@@ -353,6 +677,12 @@
       justify-content:center;
       gap:20px;
       flex-wrap:wrap;
+    }
+
+    .cta-note{
+      margin-top:24px;
+      color:#7A86A8;
+      font-size:13.5px;
     }
 
     /* FOOTER */
@@ -391,25 +721,63 @@
 
     @media(max-width:1000px){
 
+      .hero{
+        padding-top:110px;
+      }
+
       .hero-grid{
         grid-template-columns:1fr;
       }
 
+      .hero-image{
+        order:-1;
+      }
+
       .hero-text h1{
-        font-size:52px;
+        font-size:44px;
       }
 
       .section-title h2,
       .cta h2{
-        font-size:40px;
+        font-size:36px;
       }
 
       .footer-grid{
         grid-template-columns:1fr;
+        gap:36px;
+      }
+
+      .menu-toggle{
+        display:block;
       }
 
       .menu{
         display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:rgba(2,6,23,0.98);
+        flex-direction:column;
+        align-items:flex-start;
+        gap:0;
+        padding:10px 8% 20px;
+        border-bottom:1px solid rgba(255,255,255,0.08);
+      }
+
+      .menu.open{
+        display:flex;
+      }
+
+      .menu a{
+        width:100%;
+        padding:14px 0;
+        border-bottom:1px solid rgba(255,255,255,0.05);
+        font-size:16px;
+      }
+
+      section{
+        padding:80px 6%;
       }
 
     }
@@ -417,21 +785,42 @@
     @media(max-width:600px){
 
       .hero-text h1{
-        font-size:42px;
+        font-size:34px;
+      }
+
+      .hero-text p{
+        font-size:15px;
       }
 
       .logo{
-        font-size:32px;
+        font-size:28px;
       }
 
-      .hero-buttons{
+      .nav-actions .btn{
+        padding:10px 14px;
+        font-size:13px;
+      }
+
+      .hero-buttons,
+      .cta-buttons{
         flex-direction:column;
       }
 
-      .btn,
-      .btn-outline{
+      .hero-buttons .btn,
+      .hero-buttons .btn-outline,
+      .cta-buttons .btn,
+      .cta-buttons .btn-outline{
         width:100%;
         text-align:center;
+      }
+
+      .section-title h2,
+      .cta h2{
+        font-size:28px;
+      }
+
+      section{
+        padding:60px 6%;
       }
 
     }
@@ -454,15 +843,21 @@
       <div class="menu">
         <a href="#nosotros">Nosotros</a>
         <a href="#productos">Productos</a>
-        <a href="#soluciones">Soluciones</a>
+        <a href="#ventaja">Ventaja</a>
         <a href="#industrias">Industrias</a>
         <a href="#contacto">Contacto</a>
       </div>
 
-      <!-- CAMBIAR WHATSAPP -->
-      <a href="https://wa.me/51903579567" target="_blank" class="btn">
-        WhatsApp
-      </a>
+      <div class="nav-actions">
+
+        <!-- CAMBIAR WHATSAPP -->
+        <a href="https://wa.me/51903579567" target="_blank" class="btn">
+          WhatsApp
+        </a>
+
+        <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+      </div>
 
     </div>
 
@@ -482,8 +877,14 @@
         </h1>
 
         <p>
-          Encuentra mejores clientes, automatiza procesos y toma decisiones más inteligentes con datos reales, automatización y analítica avanzada.
+          Encuentra mejores clientes, automatiza procesos y toma decisiones más inteligentes con datos reales, automatización y analítica avanzada. Una sola plataforma para prospectar, entender y operar mejor.
         </p>
+
+        <div class="hero-badges">
+          <span class="hero-badge">🔍 Búsqueda empresarial por RUC</span>
+          <span class="hero-badge">🧠 Insights con IA</span>
+          <span class="hero-badge">⚙️ Automatización de procesos</span>
+        </div>
 
         <div class="hero-buttons">
 
@@ -503,7 +904,7 @@
       <div class="hero-image">
 
         <!-- REEMPLAZAR -->
-        <img src="assets/Datia_Oficial.png" alt="DATIA Dashboard">
+        <img src="assets/Datia_Oficial.png" alt="Dashboard de DATIA Sales Intelligence mostrando potencial comercial, contactos clave e insights de IA">
 
       </div>
 
@@ -519,11 +920,13 @@
 
       <div class="section-title">
 
+        <span class="eyebrow">Quiénes somos</span>
+
         <h2>¿Qué es DATIA?</h2>
 
         <p>
-          DATIA es una empresa especializada en Inteligencia Comercial, Ciencia de Datos y Automatización con Inteligencia Artificial. 
-          Ayudamos a las empresas a transformar datos dispersos en información estratégica mediante tecnologías avanzadas de análisis, 
+          DATIA es una empresa peruana especializada en Inteligencia Comercial, Ciencia de Datos y Automatización con Inteligencia Artificial.
+          Ayudamos a las empresas a transformar datos dispersos en información estratégica mediante tecnologías avanzadas de análisis,
           enriquecimiento de datos, automatización y Machine Learning.
         </p>
 
@@ -573,6 +976,87 @@
 
   </section>
 
+  <!-- VENTAJA COMPETITIVA -->
+
+  <section class="advantage" id="ventaja">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span class="eyebrow">Por qué DATIA</span>
+
+        <h2>Nuestra ventaja competitiva</h2>
+
+        <p>
+          No vendemos un software genérico. Construimos tecnología pensada para la forma en que operan
+          las empresas en Perú, con acompañamiento real detrás de cada implementación.
+        </p>
+
+      </div>
+
+      <div class="advantage-grid">
+
+        <div class="advantage-card">
+          <div class="advantage-icon">🇵🇪</div>
+          <h3>Hecho para el mercado peruano</h3>
+          <p>
+            Enriquecimiento de empresas a partir del RUC y fuentes locales, pensado para cómo
+            prospectan y venden las empresas en Perú — no una plataforma genérica traducida.
+          </p>
+        </div>
+
+        <div class="advantage-card">
+          <div class="advantage-icon">🧩</div>
+          <h3>Todo en un solo lugar</h3>
+          <p>
+            Sales Intelligence, Speech Analytics, Analytics y Automatización conviven en un mismo
+            ecosistema, sin necesidad de integrar cinco herramientas distintas.
+          </p>
+        </div>
+
+        <div class="advantage-card">
+          <div class="advantage-icon">🧠</div>
+          <h3>IA aplicada, no solo dashboards</h3>
+          <p>
+            Nuestra IA no solo muestra datos: genera scoring, prioriza oportunidades y recomienda
+            la siguiente acción comercial.
+          </p>
+        </div>
+
+        <div class="advantage-card">
+          <div class="advantage-icon">⚡</div>
+          <h3>Automatización con resultados probados</h3>
+          <p>
+            Ya automatizamos procesos documentales reales en el sector salud, reduciendo tiempos
+            administrativos y trabajo manual con papeleo.
+          </p>
+        </div>
+
+        <div class="advantage-card">
+          <div class="advantage-icon">🤝</div>
+          <h3>Acompañamiento humano</h3>
+          <p>
+            Detrás de la plataforma hay un equipo de producto, tecnología y ventas disponible
+            por WhatsApp — no un software que te deja solo.
+          </p>
+        </div>
+
+        <div class="advantage-card">
+          <div class="advantage-icon">🔗</div>
+          <h3>Múltiples canales de acceso</h3>
+          <p>
+            Accede desde la plataforma web o consulta información al instante desde Telegram,
+            con WhatsApp e integraciones vía API en camino.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
   <!-- PRODUCTS -->
 
   <section id="productos">
@@ -581,10 +1065,13 @@
 
       <div class="section-title">
 
+        <span class="eyebrow">Ecosistema DATIA</span>
+
         <h2>Productos DATIA</h2>
 
         <p>
-          Un ecosistema completo de inteligencia comercial y automatización.
+          Un ecosistema completo de inteligencia comercial, analítica y automatización, diseñado para
+          que vender más y operar mejor dejen de ser tareas separadas.
         </p>
 
       </div>
@@ -595,23 +1082,25 @@
 
         <div class="product-card">
 
-          <img src="assets/laptop.png" alt="DATIA Platform">
+          <img src="assets/laptop.png" alt="Interfaz de DATIA Platform con score de potencial comercial y mapa de ubicación">
 
           <div class="product-content">
+
+            <span class="product-tag">Sales Intelligence</span>
 
             <h3>DATIA Platform</h3>
 
             <p>
-              Plataforma de Sales Intelligence diseñada para dealers,
-              equipos comerciales y empresas B2B.
+              Plataforma de Sales Intelligence diseñada para equipos comerciales, asesores
+              de venta y empresas B2B que necesitan encontrar y priorizar clientes potenciales.
             </p>
 
             <ul>
               <li>Búsqueda empresarial por RUC</li>
-              <li>Contactos clave enriquecidos</li>
+              <li>Contactos clave enriquecidos (LinkedIn, teléfonos, correos)</li>
               <li>Insights generados por IA</li>
-              <li>Scoring comercial automático</li>
-              <li>Análisis de potencial comercial</li>
+              <li>Scoring de potencial comercial (0–100)</li>
+              <li>Priorización inteligente de oportunidades</li>
               <li>Automatización de prospección</li>
             </ul>
 
@@ -623,27 +1112,114 @@
 
         <div class="product-card">
 
-          <img src="assets/celular.png" alt="DATIA Telegram Bot">
+          <img src="assets/celular.png" alt="DATIA Telegram Bot consultando información empresarial desde el celular">
 
           <div class="product-content">
+
+            <span class="product-tag">Acceso rápido</span>
 
             <h3>DATIA Telegram Bot</h3>
 
             <p>
-              Asistente inteligente empresarial conectado a la plataforma DATIA.
+              Asistente inteligente conectado a la plataforma DATIA para consultar información
+              comercial al instante, sin abrir el navegador.
             </p>
 
             <ul>
-              <li>Consulta empresas por RUC</li>
+              <li>Consulta empresas por RUC desde el chat</li>
               <li>Perfil empresarial automático</li>
               <li>Datos comerciales enriquecidos</li>
               <li>Insights IA instantáneos</li>
-              <li>Consultas desde Telegram</li>
               <li>Automatización conversacional</li>
+              <li>WhatsApp y API — próximamente</li>
             </ul>
 
           </div>
 
+        </div>
+
+      </div>
+
+      <div class="products-grid-compact">
+
+        <div class="product-card-compact">
+          <div class="advantage-icon">🎧</div>
+          <h3>DATIA Speech Analytics</h3>
+          <p>
+            Transcripción automática de llamadas, KPIs de conversación, evaluación de protocolos
+            y resúmenes generados con IA para equipos de call center.
+          </p>
+        </div>
+
+        <div class="product-card-compact">
+          <div class="advantage-icon">📊</div>
+          <h3>DATIA Analytics</h3>
+          <p>
+            Dashboards a medida, modelos predictivos, segmentación de clientes y detección
+            de anomalías y riesgo de fuga (churn).
+          </p>
+        </div>
+
+        <div class="product-card-compact">
+          <div class="advantage-icon">🤖</div>
+          <h3>DATIA Automation</h3>
+          <p>
+            Automatización de procesos con RPA + IA: digitalización de documentos, OCR
+            y generación de formularios sin intervención manual.
+          </p>
+          <div class="case-box">
+            <b>Caso real:</b> automatizamos la digitalización y generación de FUAs para una
+            Posta Médica, con OCR e impresión automática de formularios.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- COMO FUNCIONA -->
+
+  <section id="proceso">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span class="eyebrow">Cómo funciona</span>
+
+        <h2>De datos dispersos a decisiones, en tres pasos</h2>
+
+      </div>
+
+      <div class="process-grid">
+
+        <div class="process-card">
+          <span class="process-number">01</span>
+          <h3>Conecta tus datos</h3>
+          <p>
+            Ingresa el RUC de una empresa, carga tu cartera de prospectos o conecta tus llamadas
+            y procesos documentales.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <span class="process-number">02</span>
+          <h3>DATIA enriquece y analiza</h3>
+          <p>
+            Nuestra IA enriquece cada registro con contactos, actividad comercial e insights,
+            y calcula el potencial y prioridad de cada oportunidad.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <span class="process-number">03</span>
+          <h3>Decide y automatiza</h3>
+          <p>
+            Recibe recomendaciones accionables y deja que DATIA automatice las tareas repetitivas
+            de prospección, análisis y procesos operativos.
+          </p>
         </div>
 
       </div>
@@ -659,6 +1235,8 @@
     <div class="container">
 
       <div class="section-title">
+
+        <span class="eyebrow">Capacidades</span>
 
         <h2>Soluciones Inteligentes</h2>
 
@@ -728,9 +1306,57 @@
 
       <div class="section-title">
 
-        <h2>Industrias donde generamos impacto</h2>
+        <span class="eyebrow">Industrias</span>
+
+        <h2>Dónde generamos impacto</h2>
+
+        <p>
+          Empezamos por los sectores donde el problema es más claro y el impacto de DATIA es más rápido de ver.
+        </p>
 
       </div>
+
+      <div class="industries-priority">
+
+        <div class="industry-priority">
+
+          <h3>📞 Call Centers</h3>
+
+          <span class="label problema">Problema</span>
+          <p>Los asesores pierden tiempo valioso buscando empresas y contactos antes de poder vender.</p>
+
+          <span class="label solucion">Solución DATIA</span>
+          <p>Bases segmentadas, inteligencia comercial por RUC, automatización de prospección y Speech Analytics para evaluar y mejorar cada llamada.</p>
+
+        </div>
+
+        <div class="industry-priority">
+
+          <h3>🏥 Salud</h3>
+
+          <span class="label problema">Problema</span>
+          <p>Procesos manuales y formularios físicos consumen tiempo del personal administrativo y clínico.</p>
+
+          <span class="label solucion">Solución DATIA</span>
+          <p>Automatización documental con OCR e IA — como nuestro caso real de digitalización de FUAs — y procesamiento clínico más ágil.</p>
+
+        </div>
+
+        <div class="industry-priority">
+
+          <h3>📑 Estudios Contables</h3>
+
+          <span class="label problema">Problema</span>
+          <p>Captar clientes nuevos de forma constante es difícil sin un proceso comercial estructurado.</p>
+
+          <span class="label solucion">Solución DATIA</span>
+          <p>Inteligencia comercial y bases de empresas segmentadas para identificar, priorizar y automatizar la prospección de nuevos clientes.</p>
+
+        </div>
+
+      </div>
+
+      <p class="industries-secondary-title">También trabajamos con</p>
 
       <div class="industries-grid">
 
@@ -739,30 +1365,8 @@
           <h3>Telecomunicaciones</h3>
 
           <p>
-            Inteligencia comercial, dealers, scoring empresarial
+            Inteligencia comercial, red de dealers, scoring empresarial
             y automatización de ventas.
-          </p>
-
-        </div>
-
-        <div class="industry">
-
-          <h3>Call Centers</h3>
-
-          <p>
-            Speech Analytics, automatización operativa
-            y análisis de llamadas.
-          </p>
-
-        </div>
-
-        <div class="industry">
-
-          <h3>Salud</h3>
-
-          <p>
-            Automatización documental, procesamiento clínico
-            e IA aplicada a operaciones médicas.
           </p>
 
         </div>
@@ -776,6 +1380,49 @@
             y automatización de leads.
           </p>
 
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EQUIPO -->
+
+  <section id="equipo">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span class="eyebrow">Equipo</span>
+
+        <h2>Quiénes construyen DATIA</h2>
+
+      </div>
+
+      <div class="team-grid">
+
+        <div class="team-card">
+          <div class="team-avatar">A</div>
+          <h3>Anthony</h3>
+          <div class="role">Director de Producto y Tecnología</div>
+          <p>Desarrollo de soluciones, automatización, ciencia de datos e implementación técnica.</p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">J</div>
+          <h3>José</h3>
+          <div class="role">Director Comercial</div>
+          <p>Prospección, propuestas, negociación y relación con clientes y aliados.</p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">S</div>
+          <h3>Saúl</h3>
+          <div class="role">Director de Desarrollo y Validaciones</div>
+          <p>Desarrollo de plataforma, QA, integraciones y soporte a clientes.</p>
         </div>
 
       </div>
@@ -816,6 +1463,8 @@
 
       </div>
 
+      <p class="cta-note">Te respondemos por WhatsApp o correo en menos de 24 horas.</p>
+
     </div>
 
   </section>
@@ -849,9 +1498,9 @@
         <ul>
           <li>DATIA Platform</li>
           <li>Telegram Bot</li>
-          <li>Sales Intelligence</li>
           <li>Speech Analytics</li>
-          <li>Automatización IA</li>
+          <li>DATIA Analytics</li>
+          <li>DATIA Automation</li>
         </ul>
 
       </div>
@@ -863,6 +1512,7 @@
         <ul>
           <li>ventas@datia.pe</li>
           <li>+51 903 579 567</li>
+          <li>+51 982 303 042</li>
           <li>Lima, Perú</li>
         </ul>
 
@@ -875,6 +1525,25 @@
     </div>
 
   </footer>
+
+  <script>
+    var menuToggle = document.querySelector('.menu-toggle');
+    var menu = document.querySelector('.menu');
+
+    if (menuToggle && menu) {
+      menuToggle.addEventListener('click', function () {
+        var isOpen = menu.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+
+      menu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          menu.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+  </script>
 
 </body>
 </html>
