@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <title>DATIA | Sales Intelligence & IA Empresarial</title>
-  <meta name="description" content="DATIA: inteligencia comercial, analítica de datos y automatización con IA para vender más y operar mejor. Plataforma, Speech Analytics, Analytics y Automatización." />
+  <meta name="description" content="DATIA: inteligencia comercial, segmentación de mercado, campañas de contacto y automatización con IA para vender más y operar mejor. Más de 1,8M empresas peruanas en una sola plataforma." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -234,6 +234,41 @@
       border-radius:28px;
       box-shadow:0 0 60px rgba(91,92,255,0.3);
       border:1px solid rgba(255,255,255,0.08);
+    }
+
+    /* STATS STRIP */
+
+    .stats{
+      background:linear-gradient(180deg,#081122,#050C1A);
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+    }
+
+    .stats-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:30px;
+    }
+
+    .stat-item{
+      text-align:center;
+    }
+
+    .stat-item b{
+      display:block;
+      font-size:40px;
+      font-weight:800;
+      background:var(--gradient);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      margin-bottom:8px;
+    }
+
+    .stat-item span{
+      color:var(--text);
+      font-size:14px;
+      line-height:1.6;
+      display:block;
     }
 
     /* SECTION TITLE */
@@ -747,6 +782,11 @@
         gap:36px;
       }
 
+      .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:30px 20px;
+      }
+
       .menu-toggle{
         display:block;
       }
@@ -819,6 +859,10 @@
         font-size:28px;
       }
 
+      .stat-item b{
+        font-size:30px;
+      }
+
       section{
         padding:60px 6%;
       }
@@ -883,6 +927,7 @@
         <div class="hero-badges">
           <span class="hero-badge">🔍 Búsqueda empresarial por RUC</span>
           <span class="hero-badge">🧠 Insights con IA</span>
+          <span class="hero-badge">📣 Campañas de contacto</span>
           <span class="hero-badge">⚙️ Automatización de procesos</span>
         </div>
 
@@ -906,6 +951,36 @@
         <!-- REEMPLAZAR -->
         <img src="assets/Datia_Oficial.png" alt="Dashboard de DATIA Sales Intelligence mostrando potencial comercial, contactos clave e insights de IA">
 
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- STATS -->
+
+  <section class="stats">
+
+    <div class="container stats-grid">
+
+      <div class="stat-item">
+        <b>+1,8M</b>
+        <span>empresas peruanas en nuestra base de datos</span>
+      </div>
+
+      <div class="stat-item">
+        <b>46</b>
+        <span>variables de información por empresa</span>
+      </div>
+
+      <div class="stat-item">
+        <b>+20</b>
+        <span>segmentos de mercado ya mapeados, listos para usar</span>
+      </div>
+
+      <div class="stat-item">
+        <b>95,9%</b>
+        <span>tasa de entrega comprobada en nuestras campañas de contacto</span>
       </div>
 
     </div>
@@ -999,10 +1074,10 @@
 
         <div class="advantage-card">
           <div class="advantage-icon">🇵🇪</div>
-          <h3>Hecho para el mercado peruano</h3>
+          <h3>Base de datos propia a gran escala</h3>
           <p>
-            Enriquecimiento de empresas a partir del RUC y fuentes locales, pensado para cómo
-            prospectan y venden las empresas en Perú — no una plataforma genérica traducida.
+            Más de 1,8 millones de empresas peruanas consolidadas a partir de fuentes oficiales,
+            con información que una plataforma genérica traducida simplemente no tiene.
           </p>
         </div>
 
@@ -1010,8 +1085,8 @@
           <div class="advantage-icon">🧩</div>
           <h3>Todo en un solo lugar</h3>
           <p>
-            Sales Intelligence, Speech Analytics, Analytics y Automatización conviven en un mismo
-            ecosistema, sin necesidad de integrar cinco herramientas distintas.
+            Sales Intelligence, segmentación de mercado, campañas de contacto, Speech Analytics,
+            Analytics y Automatización conviven en un mismo ecosistema, sin integrar cinco herramientas distintas.
           </p>
         </div>
 
@@ -1026,10 +1101,10 @@
 
         <div class="advantage-card">
           <div class="advantage-icon">⚡</div>
-          <h3>Automatización con resultados probados</h3>
+          <h3>Resultados medibles, no solo promesas</h3>
           <p>
-            Ya automatizamos procesos documentales reales en el sector salud, reduciendo tiempos
-            administrativos y trabajo manual con papeleo.
+            Ya automatizamos procesos documentales reales en el sector salud y probamos nuestras
+            campañas de contacto con empresas reales, con 95,9% de entrega exitosa.
           </p>
         </div>
 
@@ -1100,8 +1175,8 @@
               <li>Contactos clave enriquecidos (LinkedIn, teléfonos, correos)</li>
               <li>Insights generados por IA</li>
               <li>Scoring de potencial comercial (0–100)</li>
+              <li>Segmentación de mercado por rubro, tamaño y ubicación</li>
               <li>Priorización inteligente de oportunidades</li>
-              <li>Automatización de prospección</li>
             </ul>
 
           </div>
@@ -1173,6 +1248,19 @@
           </div>
         </div>
 
+        <div class="product-card-compact">
+          <div class="advantage-icon">📣</div>
+          <h3>DATIA Outreach</h3>
+          <p>
+            Campañas de contacto masivo con empresas segmentadas, cuidando la reputación del
+            dominio y con reportes de entrega en tiempo real.
+          </p>
+          <div class="case-box">
+            <b>Caso real:</b> campaña piloto a 98 empresas del sector salud, con 95,9% de tasa
+            de entrega y cero quejas.
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -1215,10 +1303,10 @@
 
         <div class="process-card">
           <span class="process-number">03</span>
-          <h3>Decide y automatiza</h3>
+          <h3>Decide, contacta y automatiza</h3>
           <p>
-            Recibe recomendaciones accionables y deja que DATIA automatice las tareas repetitivas
-            de prospección, análisis y procesos operativos.
+            Recibe recomendaciones accionables, lanza campañas de contacto a tu segmento ideal
+            y deja que DATIA automatice las tareas repetitivas de prospección y procesos operativos.
           </p>
         </div>
 
@@ -1338,7 +1426,7 @@
           <p>Procesos manuales y formularios físicos consumen tiempo del personal administrativo y clínico.</p>
 
           <span class="label solucion">Solución DATIA</span>
-          <p>Automatización documental con OCR e IA — como nuestro caso real de digitalización de FUAs — y procesamiento clínico más ágil.</p>
+          <p>Automatización documental con OCR e IA — como nuestro caso real de digitalización de FUAs — y campañas de contacto ya probadas en el sector, con 95,9% de entrega exitosa.</p>
 
         </div>
 
@@ -1501,6 +1589,7 @@
           <li>Speech Analytics</li>
           <li>DATIA Analytics</li>
           <li>DATIA Automation</li>
+          <li>DATIA Outreach</li>
         </ul>
 
       </div>
