@@ -467,6 +467,86 @@
       color:#7FD8FF;
     }
 
+    /* SOLUTIONS COMBO */
+
+    .solutions-list{
+      display:flex;
+      flex-direction:column;
+      gap:24px;
+      max-width:980px;
+      margin:0 auto;
+    }
+
+    .solution-card{
+      background:#0B1730;
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:34px;
+      transition:0.3s;
+    }
+
+    .solution-card:hover{
+      border-color:rgba(91,92,255,0.5);
+    }
+
+    .solution-card h3{
+      font-size:22px;
+      margin-bottom:20px;
+    }
+
+    .solution-flow{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:10px;
+      margin-bottom:20px;
+    }
+
+    .flow-chip{
+      background:rgba(255,255,255,0.05);
+      border:1px solid var(--border);
+      color:var(--text);
+      font-size:13.5px;
+      font-weight:600;
+      padding:8px 14px;
+      border-radius:100px;
+      white-space:nowrap;
+    }
+
+    .flow-plus{
+      color:#7A86A8;
+      font-weight:700;
+      font-size:16px;
+    }
+
+    .flow-equals{
+      color:#5FD4FF;
+      font-weight:700;
+      font-size:18px;
+    }
+
+    .flow-result{
+      background:var(--gradient);
+      color:white;
+      font-size:13.5px;
+      font-weight:700;
+      padding:9px 16px;
+      border-radius:100px;
+      white-space:nowrap;
+      box-shadow:0 0 16px rgba(91,92,255,0.25);
+    }
+
+    .solution-card p{
+      color:var(--text);
+      line-height:1.8;
+      font-size:15px;
+      margin-bottom:18px;
+    }
+
+    .solution-card .case-box{
+      margin:0;
+    }
+
     /* PROCESS */
 
     .process-grid{
@@ -831,6 +911,16 @@
         font-size:30px;
       }
 
+      .solution-card{
+        padding:26px;
+      }
+
+      .flow-chip,
+      .flow-result{
+        font-size:12.5px;
+        padding:7px 12px;
+      }
+
       section{
         padding:60px 6%;
       }
@@ -1164,6 +1254,166 @@
           <div class="case-box">
             <b>Caso real:</b> campaña piloto a 98 empresas del sector salud, con 95,9% de tasa
             de entrega y cero quejas.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SOLUCIONES COMBINADAS -->
+
+  <section id="combos">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span class="eyebrow">Ecosistema en acción</span>
+
+        <h2>Cuando los productos trabajan juntos</h2>
+
+        <p>
+          Cada producto DATIA resuelve una parte del proceso comercial. Combinados, resuelven
+          algo más grande que la suma de sus partes.
+        </p>
+
+      </div>
+
+      <div class="solutions-list">
+
+        <div class="solution-card">
+
+          <h3>Campaña comercial de principio a fin</h3>
+
+          <div class="solution-flow">
+            <span class="flow-chip">🧭 Perfilador</span>
+            <span class="flow-plus">+</span>
+            <span class="flow-chip">🔍 Platform</span>
+            <span class="flow-plus">+</span>
+            <span class="flow-chip">📣 Send Engine</span>
+            <span class="flow-plus">+</span>
+            <span class="flow-chip">📊 Analytics</span>
+            <span class="flow-equals">=</span>
+            <span class="flow-result">🎯 Campaña medida de principio a fin</span>
+          </div>
+
+          <p>
+            Perfilador arma la lista segmentada, Platform prioriza por score quién tiene más
+            potencial, Send Engine lanza la campaña de contacto y Analytics mide quién respondió
+            y qué tan efectiva fue.
+          </p>
+
+          <div class="case-box">
+            <b>Qué gana el cliente:</b> una campaña que se arma, se lanza y se mide sin salir del
+            ecosistema DATIA, sin exportar e importar entre herramientas sueltas.
+          </div>
+
+        </div>
+
+        <div class="solution-card">
+
+          <h3>Prospección inteligente para equipos de venta</h3>
+
+          <div class="solution-flow">
+            <span class="flow-chip">🧭 Perfilador</span>
+            <span class="flow-plus">+</span>
+            <span class="flow-chip">🔍 Platform</span>
+            <span class="flow-plus">+</span>
+            <span class="flow-chip">🎧 Speech Analytics</span>
+            <span class="flow-equals">=</span>
+            <span class="flow-result">🎯 Equipo de venta más efectivo</span>
+          </div>
+
+          <p>
+            Perfilador entrega la lista de empresas objetivo, Platform prioriza por score a quién
+            llamar primero y Speech Analytics analiza las llamadas para detectar qué argumento
+            cierra más.
+          </p>
+
+          <div class="case-box">
+            <b>Qué gana el cliente:</b> el equipo llama primero a quien más probablemente compre,
+            y mejora su discurso con datos reales de las llamadas, no por intuición.
+          </div>
+
+        </div>
+
+        <div class="solution-card">
+
+          <h3>Reactivación de cartera inactiva</h3>
+
+          <div class="solution-flow">
+            <span class="flow-chip">🧭 Perfilador</span>
+            <span class="flow-plus">+</span>
+            <span class="flow-chip">📣 Send Engine</span>
+            <span class="flow-plus">+</span>
+            <span class="flow-chip">📊 Analytics</span>
+            <span class="flow-equals">=</span>
+            <span class="flow-result">🎯 Ingresos recuperados sin adquisición nueva</span>
+          </div>
+
+          <p>
+            Perfilador identifica clientes o prospectos sin actividad reciente, Send Engine lanza
+            una campaña de reactivación segmentada y Analytics mide qué segmento respondió mejor.
+          </p>
+
+          <div class="case-box">
+            <b>Qué gana el cliente:</b> recupera ingresos de una base que ya tenía, sin gastar en
+            adquirir prospectos nuevos.
+          </div>
+
+        </div>
+
+        <div class="solution-card">
+
+          <h3>Automatización operativa con visibilidad</h3>
+
+          <div class="solution-flow">
+            <span class="flow-chip">🤖 Automation</span>
+            <span class="flow-plus">+</span>
+            <span class="flow-chip">📊 Analytics</span>
+            <span class="flow-equals">=</span>
+            <span class="flow-result">🎯 Ahorro de tiempo medible</span>
+          </div>
+
+          <p>
+            Automation digitaliza y procesa documentos repetitivos (como los FUAs en salud) y
+            Analytics muestra en un dashboard cuánto tiempo se ahorra y dónde se atasca el proceso.
+          </p>
+
+          <div class="case-box">
+            <b>Qué gana el cliente:</b> no solo se automatiza la tarea, también se puede mostrar
+            con números el ahorro ante la gerencia.
+          </div>
+
+        </div>
+
+        <div class="solution-card">
+
+          <h3>Centro de contacto con mejora continua</h3>
+
+          <div class="solution-flow">
+            <span class="flow-chip">🔍 Platform</span>
+            <span class="flow-plus">+</span>
+            <span class="flow-chip">🎧 Speech Analytics</span>
+            <span class="flow-plus">+</span>
+            <span class="flow-chip">📊 Analytics</span>
+            <span class="flow-equals">=</span>
+            <span class="flow-result">🎯 Call center que mejora solo</span>
+          </div>
+
+          <p>
+            Platform entrega el perfil y potencial de cada empresa a los asesores, Speech
+            Analytics evalúa cada llamada contra protocolos y Analytics agrega los resultados por
+            asesor y por equipo.
+          </p>
+
+          <div class="case-box">
+            <b>Qué gana el cliente:</b> no solo sabe a quién llamar, también ve el desempeño real
+            de cada asesor y dónde reforzar la capacitación.
           </div>
 
         </div>
